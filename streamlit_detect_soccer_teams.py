@@ -23,7 +23,9 @@ def detect_soccer_teams(video_path, output_path, model_path):
     # Define the codec and create VideoWriter object
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+    progress_bar = st.progress(0)
 
+    frame_count = 0
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -43,6 +45,10 @@ def detect_soccer_teams(video_path, output_path, model_path):
 
         # Write the frame into the output video file
         out.write(frame)
+        
+        frame_count += 1
+        progress_bar.progress(frame_count / total_frames)
+
 
     # Release the video capture and writer
     cap.release()
