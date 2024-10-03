@@ -50,7 +50,7 @@ def detect_soccer_teams(video_path, output_path, model_path):
     print("Detection complete. Output video saved at:", output_path)
 
 def main():
-    st.title("Soccer Teams Detection using YOLOv8")
+    st.title("TSG Öhringen - Herren | Data Analysis 24/25")
     st.write("Upload a video file to detect soccer teams.")
 
     uploaded_file = st.file_uploader("Choose a video file...", type=["mp4"])
