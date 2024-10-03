@@ -2,6 +2,8 @@ import streamlit as st
 import cv2
 from ultralytics import YOLO
 import numpy as np
+import tempfile
+import os
 
 def detect_soccer_teams(video_path, output_path, model_path):
     # Load the YOLO model from the specified path
