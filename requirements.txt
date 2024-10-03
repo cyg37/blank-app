@@ -1,1 +1,6 @@
 streamlit
+ultralytics
+cv2
+numpy
+tempfile
+os
