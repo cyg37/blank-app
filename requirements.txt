@@ -2,5 +2,5 @@ streamlit
 ultralytics
 opencv-python
 numpy
-tempfile
+tempfile2
 os
