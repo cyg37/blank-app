@@ -61,7 +61,7 @@ def main():
         tfile.write(uploaded_file.read())
 
         # Perform detection
-        model_path = 'best.pt'  # Model path
+        model_path = 'yolov8n.pt'  # Model path
         output_path = 'output_video.mp4'
         detect_soccer_teams(tfile.name, output_path, model_path)
 
